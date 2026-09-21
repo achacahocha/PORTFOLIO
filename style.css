@@ -128,3 +128,108 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 
   filter: saturate(.82);
 }
+
+
+/* =================================
+   TEXTURE / UV
+================================= */
+
+.texture-section {
+  margin-top: 100px;
+  padding-top: 90px;
+  border-top: 1px solid var(--line);
+}
+
+
+/* 見出し */
+
+.texture-section .section-heading {
+  margin-bottom: 35px;
+}
+
+.texture-section .section-heading h2 {
+  font-size: clamp(36px, 4vw, 60px);
+}
+
+
+/* 画像を横並び */
+
+.texture-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 24px;
+}
+
+
+/* 各画像 */
+
+.texture-item {
+  min-width: 0;
+}
+
+
+/* 画像上のテキスト */
+
+.texture-item h3 {
+  margin: 0 0 10px;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
+/* テクスチャ画像 */
+
+.texture-item img {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  display: block;
+
+  background: #151517;
+}
+
+
+/* マウスを乗せたとき */
+
+.texture-item img {
+  transition:
+    transform .4s ease,
+    opacity .4s ease;
+}
+
+.texture-item:hover img {
+  transform: scale(1.02);
+  opacity: .9;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media(max-width: 800px) {
+
+  .texture-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+}
+
+
+@media(max-width: 500px) {
+
+  .texture-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
