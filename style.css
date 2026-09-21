@@ -206,9 +206,34 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
     opacity .4s ease;
 }
 
+.texture-item {
+  min-width: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.texture-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: #151517;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* カーソルを合わせた画像を1.5倍 */
+.texture-item:hover {
+  z-index: 10;
+}
+
 .texture-item:hover img {
-  transform: scale(1.02);
-  opacity: .9;
+  transform: scale(1.5);
+  opacity: 1;
 }
 
 
