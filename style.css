@@ -285,20 +285,17 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 .character-sheet-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 18px;
   width: 100%;
-  align-items: stretch;
+  align-items: end;
 }
 
 
-/* 各画像の枠 */
+/* 各画像 */
 .character-sheet-item {
   min-width: 0;
   position: relative;
   z-index: 1;
-
-  display: flex;
-  flex-direction: column;
 }
 
 
@@ -312,23 +309,21 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 
 
 /*
-  4枚すべて同じ高さの表示領域
+  三面図の表示領域
+
+  4枚とも同じ高さ
 */
 .character-sheet-item img {
   display: block;
 
   width: 100%;
-  height: 650px;
+  height: 700px;
 
   object-fit: contain;
-  object-position: center bottom;
+  object-position: center center;
 
   background: transparent;
 
-  /*
-    画像自体を拡大・縮小しても
-    表示領域の高さは全て650pxで統一
-  */
   transition: transform 0.35s ease;
 }
 
@@ -339,7 +334,7 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 }
 
 .character-sheet-item:hover img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 
@@ -350,11 +345,11 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 @media(max-width:1000px) {
 
   .character-sheet-grid {
-    gap: 8px;
+    gap: 12px;
   }
 
   .character-sheet-item img {
-    height: 520px;
+    height: 600px;
   }
 }
 
@@ -371,7 +366,7 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
   }
 
   .character-sheet-item img {
-    height: 500px;
+    height: 550px;
   }
 }
 
@@ -383,6 +378,7 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
   }
 
   .character-sheet-item img {
-    height: 500px;
+    height: auto;
+    max-height: none;
   }
 }
