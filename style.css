@@ -284,6 +284,18 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 }
 
 /* =========================
+   PROFILE SECTION TITLE
+========================= */
+
+.profile-section-title {
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin: 12px 0 45px;
+}
+
+
+/* =========================
    PROFILE / CAREER
 ========================= */
 
@@ -293,8 +305,12 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
   margin-top: 30px;
 }
 
+.profile-history .eyebrow {
+  margin-bottom: 0;
+}
+
 .history-list {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .history-item {
@@ -307,22 +323,16 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 
 .history-year {
   font-size: 11px;
-  letter-spacing: .1em;
+  letter-spacing: .08em;
   color: #888;
   padding-top: 5px;
 }
 
 .history-content h3 {
-  margin: 0 0 12px;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.history-content p {
   margin: 0;
-  max-width: 650px;
-  color: #999;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 
@@ -336,16 +346,14 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
   margin-top: 30px;
 }
 
+.profile-hobby .profile-section-title {
+  margin-bottom: 45px;
+}
+
 .hobby-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8vw;
-  margin-top: 35px;
-}
-
-.hobby-layout h2 {
-  font-size: clamp(42px, 5vw, 72px);
-  margin: 0;
 }
 
 .hobby-text h3 {
@@ -363,31 +371,49 @@ footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-co
 
 
 /* =========================
-   PROFILE / MOBILE
+   SKILLS
+========================= */
+
+.skills .profile-section-title {
+  margin-bottom: 45px;
+}
+
+
+/* =========================
+   MOBILE
 ========================= */
 
 @media(max-width:800px) {
 
-  .history-item {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 25px 0;
-  }
-
-  .history-content h3 {
-    font-size: 19px;
-  }
-
-  .hobby-layout {
-    grid-template-columns: 1fr;
-    gap: 35px;
+  .profile-section-title {
+    font-size: clamp(44px, 12vw, 64px);
+    margin-bottom: 35px;
   }
 
   .profile-history {
     padding-top: 65px;
   }
 
+  .history-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 25px 0;
+  }
+
+  .history-year {
+    padding-top: 0;
+  }
+
+  .history-content h3 {
+    font-size: 16px;
+  }
+
   .profile-hobby {
     padding: 65px 0 75px;
+  }
+
+  .hobby-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
 }
